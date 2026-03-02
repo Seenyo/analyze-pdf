@@ -92,7 +92,7 @@ function App() {
   const copyToClipboard = () => {
     const selectedText = extractedQuestions
       .filter(q => selectedIds.has(q.id))
-      .map(q => q.fullText)
+      .map(q => `${q.fullText}\n\nMy answer:\nCorrect answer:\n\n---`)
       .join('\n\n');
 
     if (selectedText) {
